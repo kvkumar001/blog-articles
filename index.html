@@ -22,12 +22,34 @@
     font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 19px; line-height: 1.7; -webkit-font-smoothing: antialiased;
   }
-  .page { max-width: 700px; margin: 0 auto; padding: 80px 28px 100px; }
-  h1 {
-    font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 44px;
-    line-height: 1.1; margin: 0 0 8px; color: var(--ink);
+  .page { max-width: 740px; margin: 0 auto; padding: 64px 28px 100px; }
+
+  .hero { display: flex; align-items: center; gap: 28px; margin-bottom: 20px; flex-wrap: wrap; }
+  .avatar {
+    width: 92px; height: 92px; border-radius: 50%; background: var(--card-bg);
+    border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center;
+    font-family: "Spectral", Georgia, serif; font-size: 34px; color: var(--felt); flex-shrink: 0;
+    overflow: hidden;
   }
-  .tagline { font-style: italic; color: var(--tan); font-size: 17px; margin: 0 0 56px; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  h1 {
+    font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 42px;
+    line-height: 1.1; margin: 0 0 6px; color: var(--ink);
+  }
+  .tagline { font-style: italic; color: var(--tan); font-size: 16.5px; margin: 0; }
+
+  .about-box {
+    background: var(--card-bg); border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 24px 28px; margin: 36px 0 48px; font-size: 17px; color: var(--ink-soft);
+  }
+  .about-box p:last-child { margin-bottom: 0; }
+  .social-links { margin-top: 14px; }
+  .social-links a {
+    color: var(--felt); text-decoration: none; font-size: 15px; font-weight: 600;
+    margin-right: 18px;
+  }
+  .social-links a:hover { text-decoration: underline; }
+
   .section-label {
     font-family: "Spectral", Georgia, serif; font-size: 14px; font-weight: 600;
     letter-spacing: 0.14em; text-transform: uppercase; color: var(--tan);
@@ -59,15 +81,30 @@
   }
   footer a { color: var(--felt); text-decoration: underline; }
   @media (max-width: 600px) {
-    body { font-size: 17px; } h1 { font-size: 34px; } .page { padding: 56px 20px 90px; }
+    body { font-size: 17px; } h1 { font-size: 32px; } .page { padding: 48px 20px 90px; }
+    .hero { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <h1>Silicon Ideas</h1>
-  <p class="tagline">Essays on AI infrastructure, semiconductors, and the economics underneath them — Kumar Venkatramani</p>
+  <div class="hero">
+    <div class="avatar"><!-- photo goes here, e.g. <img src="headshot.jpg" alt="Kumar Venkatramani"> --> K</div>
+    <div>
+      <h1>Silicon Ideas</h1>
+      <p class="tagline">Essays on AI infrastructure, semiconductors, and the economics underneath them</p>
+    </div>
+  </div>
+
+  <div class="about-box">
+    <p>I'm Kumar Venkatramani — 40+ years in the semiconductor and automation industry, with a background spanning design automation, autonomous systems, and the Internet of Things. With some trepidation, I started writing these essays to share what I'm learning and find kindred spirits who care about the same questions: where the real economics sit underneath the technology everyone's talking about, and what's actually durable versus what's just hype.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kumarvenkatramani/" target="_blank">LinkedIn</a>
+      <a href="http://twitter.com/@kvkumar" target="_blank">Twitter</a>
+      <a href="mailto:kumar@silicon-ideas.com">Get in touch</a>
+    </div>
+  </div>
 
   <div class="section-label">Latest</div>
   <div class="post-list">
