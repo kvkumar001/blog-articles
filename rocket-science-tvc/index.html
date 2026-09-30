@@ -26,9 +26,10 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Spectral', Georgia, serif;
-  font-size: 18px;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 19px;
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── HEADER ── */
@@ -79,27 +80,31 @@ body {
   margin-bottom: 16px;
 }
 h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1.15;
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
+h1 em { font-style: italic; color: var(--slate); }
 .byline {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 14px;
-  color: var(--ink-soft);
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--brass);
   margin-bottom: 36px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--hairline);
 }
 .byline strong { color: var(--ink-mid); }
 h2 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--ink);
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--slate);
   margin: 2.4rem 0 0.7rem;
 }
 p { margin-bottom: 1.1rem; }
@@ -241,8 +246,8 @@ th { font-weight: 600; color: var(--ink-mid); background: var(--cream); }
 <div class="article-wrap">
   <p class="article-label">Aerospace &amp; Engineering</p>
   
-<h1>Learning About Rocket Science, One Small Step at a Time</h1>
-<p class="byline"><strong>Kumar Venkatramani</strong> · September 2026 · <em>Peeking under the hood to understand one small piece of rocket science</em></p>
+<h1>Learning About Rocket Science, <em>One Small Step</em> at a Time</h1>
+<p class="byline"><em>Kumar Venkatramani</em> · September 2026</p>
 
 <p>On September 28, SpaceX's Starship reached orbit for the first time, on its fourteenth test flight. The headlines were about the milestone. The question my inner child asked was much simpler: how does a rocket actually steer in space?</p>
 
